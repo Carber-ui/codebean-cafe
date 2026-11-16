@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>주문하기 | 코드빈</title>
+  <link rel="stylesheet" href="style.css?v=26"><link rel="stylesheet" href="account.css?v=2"><link rel="stylesheet" href="order.css?v=12">
+  <script src="account-status.js?v=2" defer></script><script src="catalog.js?v=1" defer></script><script src="pricing.js?v=1" defer></script><script src="stores-data.js?v=2" defer></script><script src="order.js?v=14" defer></script>
+</head>
+<body class="order-page">
+<header class="order-header"><div class="order-header-inner">
+  <a class="brand" href="index.html#top" aria-label="코드빈 홈"><span class="brand-logo-frame"><img class="brand-logo" src="assets/codebean-cup-logo.png" alt=""></span></a>
+  <div class="notice-actions"><a class="notice-menu-link" href="menu.html#menu">메뉴 보기 <span aria-hidden="true">↗</span></a><div class="header-account">
+    <a class="account-link" data-account-link href="account.html" aria-label="로그인"><svg class="account-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.5"></circle><path d="M5.5 20c0-3.3 2.8-6 6.5-6s6.5 2.7 6.5 6"></path></svg><span class="account-link-text">로그인</span></a>
+    <span class="account-name" data-account-name hidden></span><button class="account-logout" type="button" data-account-logout aria-label="로그아웃" hidden><svg class="account-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 4H5v16h5M14 8l4 4-4 4M8 12h10"></path></svg><span class="account-link-text">로그아웃</span></button>
+  </div></div>
+</div></header>
+<main class="order-main">
+  <div class="order-heading"><div><p class="order-eyebrow">코드빈</p><h1>주문하기</h1></div></div>
+  <div class="order-layout">
+    <section class="order-catalog" aria-labelledby="order-menu-title">
+      <h2 id="order-menu-title">메뉴</h2>
+      <div class="order-filters" role="group" aria-label="메뉴 분류">
+        <button class="order-filter active" type="button" data-category="전체" aria-pressed="true">전체</button><button class="order-filter" type="button" data-category="커피" aria-pressed="false">커피</button><button class="order-filter" type="button" data-category="라떼" aria-pressed="false">라떼</button><button class="order-filter" type="button" data-category="에이드" aria-pressed="false">에이드</button><button class="order-filter" type="button" data-category="티" aria-pressed="false">티</button><button class="order-filter" type="button" data-category="주스" aria-pressed="false">주스</button><button class="order-filter" type="button" data-category="스무디·프라페" aria-pressed="false">스무디·프라페</button><button class="order-filter" type="button" data-category="디저트" aria-pressed="false">푸드</button>
+      </div>
+      <div class="order-temperature-options" id="order-temperatures" role="group" aria-label="음료 온도"><button class="order-temp active" type="button" data-temperature="모두" aria-pressed="true">모두</button><button class="order-temp" type="button" data-temperature="따뜻한" aria-pressed="false">HOT</button><button class="order-temp" type="button" data-temperature="차가운" aria-pressed="false">ICE</button></div>
+      <label class="order-search"><span class="sr-only">메뉴 검색</span><input type="search" id="order-search" placeholder="메뉴명 또는 초성 검색" autocomplete="off"><span aria-hidden="true">⌕</span></label>
+      <div class="order-products" id="order-products"></div><p class="order-empty" id="order-empty" hidden>검색 결과가 없습니다.</p>
+    </section>
+    <aside class="cart" id="cart" aria-labelledby="cart-title">
+      <div class="cart-heading"><h2 id="cart-title">장바구니</h2><span id="cart-count">0개</span><button class="cart-close" type="button" aria-label="장바구니 닫기">×</button></div>
+      <p class="cart-empty" id="cart-empty">담은 메뉴가 없습니다.</p>
+      <p class="cart-error" id="cart-error" role="status" hidden>장바구니를 브라우저에 저장하지 못했습니다.</p>
+      <ul class="cart-items" id="cart-items"></ul>
+      <div class="cart-total"><span>합계</span><strong id="cart-total">0원</strong></div>
+      <button class="checkout-button" id="checkout-button" type="button" disabled>결제하기</button>
+    </aside>
+  </div>
+</main>
+<button class="cart-backdrop" type="button" aria-label="장바구니 닫기" hidden></button><button class="mobile-cart" type="button" id="mobile-cart" aria-controls="cart" aria-expanded="false" hidden><span>장바구니 <b id="mobile-count">0</b></span><strong id="mobile-total">0원</strong></button>
+<p class="cart-toast" id="cart-toast" role="status" aria-live="polite" hidden></p>
+<dialog class="option-dialog" id="option-dialog" aria-labelledby="option-title"><div id="option-content"></div></dialog>
+<dialog class="checkout-dialog" id="checkout-dialog" aria-labelledby="checkout-title"><div id="checkout-content"></div></dialog>
+</body></html>

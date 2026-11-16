@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ko"><head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>카페 소개 | 코드빈</title>
+  <link rel="stylesheet" href="style.css?v=26"><link rel="stylesheet" href="account.css?v=2">
+  <script src="app.js?v=15" defer></script><script src="account-status.js?v=2" defer></script>
+</head><body class="sub-page about-page">
+<a class="skip" href="#content">본문 바로가기</a>
+<header class="header" id="site-header"><div class="header-inner">
+  <a class="brand" href="index.html#top" aria-label="코드빈 홈"><span class="brand-logo-frame"><img class="brand-logo" src="assets/codebean-cup-logo.png" alt=""></span></a>
+  <nav class="primary-nav" aria-label="주요 메뉴">
+    <a class="nav-trigger nav-menu-link" href="menu.html#menu">메뉴소개</a>
+    <button class="nav-trigger" type="button" aria-expanded="false" aria-controls="nav-panel" data-nav="story">우리의 이야기</button>
+    <button class="nav-trigger" type="button" aria-expanded="false" aria-controls="nav-panel" data-nav="store">매장 안내</button>
+    <button class="nav-trigger" type="button" aria-expanded="false" aria-controls="nav-panel" data-nav="news">카페 소식</button>
+  </nav>
+  <div class="header-account">
+      <a class="account-link" data-account-link href="account.html" aria-label="로그인"><svg class="account-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.5"></circle><path d="M5.5 20c0-3.3 2.8-6 6.5-6s6.5 2.7 6.5 6"></path></svg><span class="account-link-text">로그인</span></a>
+      <span class="account-name" data-account-name hidden></span><button class="account-logout" type="button" data-account-logout aria-label="로그아웃" hidden><svg class="account-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 4H5v16h5M14 8l4 4-4 4M8 12h10"></path></svg><span class="account-link-text">로그아웃</span></button>
+    </div>
+</div>
+<div class="nav-panel" id="nav-panel" aria-hidden="true" inert>
+  <div class="nav-panel-inner">
+    <div class="nav-column" data-column="story"><a href="about.html#about">카페 소개</a><span class="nav-placeholder">브랜드 이야기 <small>준비 중</small></span></div>
+    <div class="nav-column" data-column="store"><a href="stores.html">매장 안내</a></div>
+    <div class="nav-column" data-column="news"><a href="index.html#event">이벤트</a><a href="notices.html">공지사항</a></div>
+  </div>
+</div></header>
+<main id="content"><section id="about" class="section about-section"><div class="about-photo" role="img" aria-label="커피와 음료, 크루아상"></div><div class="about-copy"><h2>카페 소개</h2><p>커피와 음료, 디저트를 만나보세요.</p><a id="visit" class="visit-card" href="stores.html"><span class="pin" aria-hidden="true">✳</span><div><strong>매장 안내</strong><p>매장 위치와 영업시간</p></div></a></div></section></main>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <a href="index.html#top" class="footer-brand" aria-label="코드빈 홈"><span class="brand-logo-frame"><img class="brand-logo" src="assets/codebean-cup-logo.png" alt=""></span></a>
+    <div class="footer-content">
+      <div class="footer-info">
+        <div class="footer-row"><span class="footer-label">공동대표자</span><span>김영환, 윤동하</span></div>
+        <div class="footer-row"><span class="footer-label">사업자등록번호</span><span>124-35-67895</span></div>
+        <div class="footer-row"><span class="footer-label">주소</span><span>경기도 안양시 동안구 시민대로 180, 2층</span></div>
+      </div>
+      <div class="footer-contact"><span class="footer-contact-title">문의</span><a href="mailto:ejdbbc@naver.com">ejdbbc@naver.com</a></div>
+    </div>
+    <div class="footer-bottom">© 코드빈. ALL RIGHTS RESERVED.</div>
+  </div>
+</footer>
+<a class="floating-order" href="order.html" aria-label="주문하기"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h2l1.5 9h9.8l1.7-6.5H7M9 19h.01M17 19h.01"></path></svg><span>주문</span></a>
+
+</body></html>

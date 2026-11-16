@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="매일의 기분 좋은 한 잔을 위한 카페 홈페이지 시안입니다.">
+  <title>코드빈 | 좋은 하루의 시작</title>
+  <link rel="stylesheet" href="style.css?v=27">
+  <link rel="stylesheet" href="account.css?v=2">
+  <script src="app.js?v=15" defer></script>
+  <script src="catalog.js?v=1" defer></script>
+  <script src="pricing.js?v=1" defer></script>
+  <script src="account-status.js?v=2" defer></script>
+</head>
+<body class="home-page">
+<a class="skip" href="menu.html#menu">메뉴 바로가기</a>
+<header class="header" id="site-header"><div class="header-inner">
+  <a class="brand" href="index.html#top" aria-label="코드빈 홈"><span class="brand-logo-frame"><img class="brand-logo" src="assets/codebean-cup-logo.png" alt=""></span></a>
+  <nav class="primary-nav" aria-label="주요 메뉴">
+    <a class="nav-trigger nav-menu-link" href="menu.html#menu">메뉴소개</a>
+    <button class="nav-trigger" type="button" aria-expanded="false" aria-controls="nav-panel" data-nav="story">우리의 이야기</button>
+    <button class="nav-trigger" type="button" aria-expanded="false" aria-controls="nav-panel" data-nav="store">매장 안내</button>
+    <button class="nav-trigger" type="button" aria-expanded="false" aria-controls="nav-panel" data-nav="news">카페 소식</button>
+  </nav>
+  <div class="header-account">
+      <a class="account-link" data-account-link href="account.html" aria-label="로그인"><svg class="account-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.5"></circle><path d="M5.5 20c0-3.3 2.8-6 6.5-6s6.5 2.7 6.5 6"></path></svg><span class="account-link-text">로그인</span></a>
+      <span class="account-name" data-account-name hidden></span><button class="account-logout" type="button" data-account-logout aria-label="로그아웃" hidden><svg class="account-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 4H5v16h5M14 8l4 4-4 4M8 12h10"></path></svg><span class="account-link-text">로그아웃</span></button>
+    </div>
+</div>
+<div class="nav-panel" id="nav-panel" aria-hidden="true" inert>
+  <div class="nav-panel-inner">
+    <div class="nav-column" data-column="story"><a href="about.html#about">카페 소개</a><span class="nav-placeholder">브랜드 이야기 <small>준비 중</small></span></div>
+    <div class="nav-column" data-column="store"><a href="stores.html">매장 안내</a></div>
+    <div class="nav-column" data-column="news"><a href="index.html#event">이벤트</a><a href="notices.html">공지사항</a></div>
+  </div>
+</div></header>
+<main id="top">
+<section class="hero"><div class="hero-inner">
+  <div class="hero-copy"><h1>COFFEE<br><em>AND DESSERT</em></h1></div>
+  <div class="hero-visual" role="img" aria-label="햇살이 들어오는 카페와 테이블 위 커피"></div>
+  
+</div></section>
+
+<section class="feature-section" aria-labelledby="feature-title"><div class="section feature-inner">
+  <div class="feature-heading"><h2 id="feature-title">메뉴 소개</h2><a class="feature-link" href="menu.html#menu">전체 메뉴 보기 <span aria-hidden="true">↗</span></a></div>
+  <div class="feature-grid">
+    <div class="feature-item"><div class="feature-photo feature-coffee" role="img" aria-label="아이스 아메리카노"></div><div class="feature-details"><strong>아이스 아메리카노</strong><span data-product-price="ICED AMERICANO"></span></div></div>
+    <div class="feature-item"><div class="feature-photo feature-strawberry" role="img" aria-label="딸기라떼"></div><div class="feature-details"><strong>딸기라떼</strong><span data-product-price="STRAWBERRY LATTE"></span></div></div>
+    <div class="feature-item"><div class="feature-photo feature-bread" role="img" aria-label="버터 크루아상"></div><div class="feature-details"><strong>버터 크루아상</strong><span data-product-price="BUTTER CROISSANT"></span></div></div>
+  </div>
+</div></section>
+<section id="event" class="event-section"><div class="section event-inner">
+  <div class="event-copy"><h2>카페 혜택</h2><p>할인과 적립 혜택을 확인해 보세요.</p><a class="button-dark" href="notices.html">혜택 자세히 보기 <span aria-hidden="true">↗</span></a></div>
+  <div class="event-cards" aria-label="혜택 종류">
+    <div class="event-card"><span>할인</span><strong>군인 할인</strong></div>
+    <div class="event-card"><span>카드 혜택</span><strong>나라사랑카드</strong></div>
+    <div class="event-card"><span>포인트</span><strong>다회 구매 적립</strong></div>
+  </div>
+</div></section>
+
+</main>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <a href="#top" class="footer-brand" aria-label="코드빈 홈"><span class="brand-logo-frame"><img class="brand-logo" src="assets/codebean-cup-logo.png" alt=""></span></a>
+    <div class="footer-content">
+      <div class="footer-info">
+        <div class="footer-row"><span class="footer-label">공동대표자</span><span>김영환, 윤동하</span></div>
+        <div class="footer-row"><span class="footer-label">사업자등록번호</span><span>124-35-67895</span></div>
+        <div class="footer-row"><span class="footer-label">주소</span><span>경기도 안양시 동안구 시민대로 180, 2층</span></div>
+      </div>
+      <div class="footer-contact"><span class="footer-contact-title">문의</span><a href="mailto:ejdbbc@naver.com">ejdbbc@naver.com</a></div>
+    </div>
+    <div class="footer-bottom">© 코드빈. ALL RIGHTS RESERVED.</div>
+  </div>
+</footer>
+<a class="floating-order" href="order.html" aria-label="주문하기"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h2l1.5 9h9.8l1.7-6.5H7M9 19h.01M17 19h.01"></path></svg><span>주문</span></a>
+
+</body></html>

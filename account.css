@@ -1,0 +1,207 @@
+/* 홈페이지와 공지사항의 로그인 상태 */
+.header-account {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-left: auto;
+  white-space: nowrap;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.account-link, .account-logout {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  background: transparent;
+  color: #20201e;
+  font: inherit;
+  text-decoration: none;
+}
+
+.account-link:hover, .account-logout:hover {
+  color: #806400;
+}
+
+.account-link[hidden], .account-name[hidden], .account-logout[hidden] {
+  display: none;
+}
+
+.account-name {
+  max-width: 92px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.account-icon {
+  display: none;
+  width: 22px;
+  height: 22px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.notice-actions {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+/* 로그인과 회원가입 */
+.account-page {
+  min-height: 100vh;
+  background: #f8f7f2;
+}
+
+.account-page-header {
+  display: flex;
+  align-items: center;
+  max-width: 1250px;
+  height: 88px;
+  margin: 0 auto;
+  padding: 0 42px;
+}
+
+.account-main {
+  display: flex;
+  justify-content: center;
+  padding: 65px 22px 100px;
+}
+
+.account-card {
+  width: 100%;
+  max-width: 460px;
+  padding: 45px 42px 38px;
+  background: #fff;
+  box-shadow: 0 10px 40px rgba(35, 35, 30, .05);
+}
+
+.account-card h1 {
+  margin: 0;
+  font-size: 32px;
+  letter-spacing: -.06em;
+}
+
+.account-description {
+  margin: 12px 0 30px;
+  color: #78776f;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.account-card form {
+  display: grid;
+  gap: 10px;
+}
+
+.account-card form[hidden], .account-message[hidden] {
+  display: none;
+}
+
+.account-card label {
+  margin-top: 7px;
+  color: #33342f;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.account-card input {
+  width: 100%;
+  min-height: 50px;
+  padding: 0 14px;
+  border: 1px solid #deded7;
+  border-radius: 0;
+  background: #fff;
+  color: #20201e;
+  font: inherit;
+}
+
+.account-card input::placeholder {
+  color: #a4a39b;
+  font-size: 13px;
+}
+
+.account-card input:focus {
+  border-color: #c6a000;
+  outline: 2px solid rgba(255, 208, 0, .28);
+  outline-offset: 0;
+}
+
+.account-message {
+  margin: 0 0 20px;
+  padding: 12px 14px;
+  background: #fff6e9;
+  color: #874527;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.account-submit {
+  min-height: 52px;
+  margin-top: 18px;
+  border: 0;
+  background: var(--yellow);
+  color: #20201e;
+  font: inherit;
+  font-weight: 800;
+}
+
+.account-submit:hover {
+  background: #edc200;
+}
+
+.account-submit:disabled {
+  cursor: wait;
+  opacity: .65;
+}
+
+.account-switch {
+  margin: 14px 0 0;
+  color: #88877f;
+  font-size: 13px;
+  text-align: center;
+}
+
+.account-switch button {
+  margin-left: 6px;
+  padding: 4px 0;
+  border: 0;
+  background: transparent;
+  color: #292a25;
+  font: inherit;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+@media (min-width: 801px) and (max-width: 1200px) {
+  .header-account { gap: 8px; }
+  .header-account .account-name { max-width: 60px; }
+}
+
+@media (max-width: 800px) {
+  .header-account { font-size: 12px; }
+  .account-page-header { height: 72px; padding: 0 22px; }
+  .account-main { padding-top: 45px; }
+  .notice-actions { gap: 22px; }
+}
+
+@media (max-width: 480px) {
+  .header-account { gap: 6px; }
+  .account-icon { display: block; }
+  .account-link-text, .account-name { display: none; }
+  .account-card { padding: 36px 25px 32px; }
+  .notice-actions { gap: 16px; }
+}
+
+@media (max-width: 360px) {
+  .header .nav-trigger { padding: 0 3px; font-size: 10px; }
+  .header .brand { font-size: 13px; }
+  .header .brand-mark { font-size: 26px; }
+}

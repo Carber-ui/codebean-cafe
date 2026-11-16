@@ -1,0 +1,81 @@
+/* 공지사항은 첫 화면과 같은 카페 색감을 사용합니다. */
+.notice-page { background: #fbfaf6; }
+.notice-header { background: rgba(255, 253, 249, .88); }
+.notice-intro { padding: 145px 42px 58px; background: #f2eadb; }
+.notice-breadcrumb { margin-bottom: 13px; color: #887348; }
+.notice-intro h1 { font-size: clamp(42px, 5vw, 62px); }
+.notice-intro h1 + p { margin-top: 17px; color: #716a5e; line-height: 1.6; }
+
+.notice-content { padding: 70px 0 110px; }
+.notice-list-header { align-items: baseline; padding-bottom: 22px; }
+.notice-list-header h2 { font-size: 24px; }
+.notice-list-header span { color: #8c857a; }
+.notice-list { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; align-items: start; }
+.notice-card {
+  overflow: hidden;
+  border: 1px solid #e9e5dc;
+  border-radius: 4px;
+  background: #fff;
+  transition: border-color .2s ease, box-shadow .2s ease;
+}
+.notice-card:hover, .notice-card[open] { border-color: #d8c57d; box-shadow: 0 8px 24px rgba(49, 38, 17, .05); }
+.notice-card summary {
+  grid-template-columns: minmax(0, 1fr) 36px;
+  grid-template-areas: 'tag toggle' 'summary summary';
+  gap: 14px 16px;
+  min-height: 171px;
+  padding: 23px 25px 24px;
+}
+.notice-card summary:hover { background: #fffefa; }
+.notice-card summary:focus-visible { outline: 3px solid #927200; outline-offset: -4px; }
+.notice-tag {
+  grid-area: tag;
+  justify-self: start;
+  min-height: 27px;
+  padding: 0 10px;
+  border-radius: 20px;
+  background: #fff3c2;
+  font-size: 11px;
+}
+.notice-summary { grid-area: summary; gap: 8px; }
+.notice-summary strong { font-size: 19px; }
+.notice-summary > span { color: #77736b; line-height: 1.5; }
+.notice-toggle {
+  grid-area: toggle;
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid #e9e5dc;
+  border-radius: 50%;
+  color: #4f4a40;
+  font-size: 22px;
+}
+.notice-card[open] .notice-toggle { background: #ffda43; border-color: #ffda43; }
+.notice-body { padding: 23px 25px 25px; background: #f9f7f0; }
+.notice-body dl { gap: 14px; }
+.notice-body dl > div { grid-template-columns: 70px minmax(0, 1fr); }
+.notice-body dt { color: #8a8273; font-weight: 600; }
+.notice-body dd { color: #35342f; }
+
+@media (max-width: 1250px) {
+  .notice-content { margin: 0 42px; }
+}
+@media (max-width: 800px) {
+  .notice-intro { padding: 118px 22px 38px; }
+  .notice-breadcrumb { margin-bottom: 10px; font-size: 12px; }
+  .notice-intro h1 { font-size: 38px; }
+  .notice-intro h1 + p { margin-top: 13px; font-size: 13px; }
+  .notice-content { margin: 0 22px; padding: 48px 0 75px; }
+  .notice-list-header h2 { font-size: 21px; }
+  .notice-list { grid-template-columns: 1fr; gap: 12px; }
+  .notice-card summary { grid-template-columns: minmax(0, 1fr) 34px; gap: 10px 12px; min-height: 0; padding: 20px; }
+  .notice-summary strong { font-size: 17px; }
+  .notice-summary > span { font-size: 13px; }
+  .notice-toggle { width: 34px; height: 34px; }
+  .notice-body { padding: 20px; }
+  .notice-body dl > div { grid-template-columns: 65px minmax(0, 1fr); font-size: 13px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .notice-card { transition: none; }
+}

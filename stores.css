@@ -1,0 +1,17 @@
+.stores-page { background: #faf9f5; }
+.stores-main { max-width: 1250px; min-height: calc(100svh - 88px); margin: auto; padding: 65px 42px 100px; }
+.stores-main h1 { margin: 0 0 38px; font-size: clamp(36px, 4vw, 48px); line-height: 1.2; letter-spacing: -.06em; }
+.stores-list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin: 0; padding: 0; list-style: none; }
+.store-card { min-width: 0; padding: 28px; border: 1px solid #e7e3d9; background: #fff; }
+.store-card h2 { margin: 0 0 24px; font-size: 20px; letter-spacing: -.04em; }
+.store-info { display: grid; gap: 14px; margin: 0; }
+.store-info-row { display: grid; grid-template-columns: 60px minmax(0, 1fr); gap: 10px; font-size: 13px; line-height: 1.6; }
+.store-info dt { color: #817b6f; }
+.store-info dd { margin: 0; overflow-wrap: anywhere; }
+@media (max-width: 800px) {
+  .stores-main { min-height: calc(100svh - 72px); padding: 48px 22px 75px; }
+  .stores-main h1 { margin-bottom: 28px; }
+  .stores-list { grid-template-columns: 1fr; gap: 12px; }
+  .store-card { padding: 23px; }
+  .store-card h2 { margin-bottom: 16px; }
+}
